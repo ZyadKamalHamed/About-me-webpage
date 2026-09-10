@@ -1,0 +1,141 @@
+/* Colours
+Jet black = #272D2D
+Platnium = #ECECEC
+White = #ffffff
+Green  = #508484
+*/
+
+.background {
+    background-color: #FFFFFF;
+}
+
+/* NAV BAR*/
+#nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-evenly;
+    border: 1px solid #272D2D;
+    border-radius: 4px;
+    padding-inline: 0;
+    padding: 1rem;
+    background-color: #272D2D;
+
+}
+#nav a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#nav a:hover {
+    color: #508484;
+    font-size: 1.1rem;
+}
+#nav a:active {
+    color: #508484;
+    font-size: 1.2rem;
+}
+/* TEXT */
+.headers{
+    color: #508484;
+    font-family: Helvetica, serif;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 30px;
+}
+.headers2{
+    color: #ECECEC;
+    text-align: left;
+    font-size: 25px;
+    font-family:'Courier New', Courier, monospace ;
+}
+.body{
+    color: #FFFFFF;
+    text-align: left;
+    font-family: sans-serif;
+}
+.list{
+    font-size: small;
+}
+
+/* CONTAINERS */
+.wrapper {
+    background-color: #272D2D;
+    display: flex;
+    color: #ECECEC;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.body_container{
+    display: flex;
+    flex-direction: collun;
+    padding: 10px;
+    gap: 20px;
+}
+
+.textblock {
+    color: #FFFFFF;
+    text-align: left;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    border: #FFFFFF;
+}
+
+/* TABLES */
+.custom-table{
+    overflow-x: auto;
+    width: 100%;
+    background-color: #f9f9f9;
+    margin-inline: auto;
+    padding: 10px;
+    color: #333;
+    border: 1px solid #333;
+    text-align: left;
+    border-collapse: collapse;
+    border-style: solid;
+    align-items: stretch
+}
+.custom-table th{
+    background-color: #508484;
+    color: #fff;
+    padding: 8px;
+}
+.custom-table td{
+    height: auto;
+    background-color: #ECECEC;
+    padding: 8px;
+    border: 1px solid #333;
+}
+
+.images {
+    width: 30%;
+    height: 320px;      /* fill the wrapper's height instead of using aspect ratio */
+    object-fit: cover;
+    border: 1px solid #333;
+    background-color: #508484;
+    overflow-x: auto;
+    padding: 5px;
+}
+
+
+/* FOOTER */
+#footer {
+    display: flex;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #FFFFFF;
+    border: 1px solid #363636;
+    width: 100%;
+    height: 20px;
+    padding: 1rem;
+    background-color: #272D2D;
+}
