@@ -29,11 +29,11 @@ body {
     position: sticky;
     top: 0;
     justify-content: space-evenly;
-    border: 1px solid #272D2D;
+    border: 1px solid #4A5A6C;
     border-radius: 4px;
     padding-inline: 0;
     padding: 1rem;
-    background-color: #272D2D;
+    background-color: #4A5A6C;
 
 }
 #nav a{
@@ -46,13 +46,13 @@ body {
     font-size: 1.1rem;
 }
 #nav a:active {
-    color: #A7ABDD;
+    color: #8B7BD8;
     font-size: 1.2rem;
 }
 /* TEXT */
 /* Two typefaces only: Courier New for the title and headings, Georgia (set on body) for everything else */
 .title {
-    color: #508484;
+    color: #8B7BD8;
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
     text-align: center;
@@ -83,7 +83,7 @@ body {
 }
 /* CONTAINERS */
 .wrapper {
-    background-color: #272D2D;
+    background-color: #1C2733;
     display: flex;
     padding: 10px;
     justify-content: space-around;
