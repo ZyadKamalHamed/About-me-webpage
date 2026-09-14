@@ -104,7 +104,7 @@
                     <tr>
                         <td>#nav a, #nav a:hover, #nav a:active</td>
                         <td>Descendant</td>
-                        <td>White bold links with no underline; turn periwinkle on hover and while being clicked.</td>
+                        <td>White bold links with no underline; turn iris on hover and while being clicked.</td>
                         <td>Every page</td>
                     </tr>
                     <tr>
@@ -116,7 +116,7 @@
                     <tr>
                         <td>.title</td>
                         <td>Class</td>
-                        <td>Page heading: Courier New, 30px, teal, centred.</td>
+                        <td>Page heading: Courier New, 30px, iris, centred.</td>
                         <td>The h1 on every page</td>
                     </tr>
                     <tr>
@@ -156,7 +156,7 @@
                     <tr>
                         <td>.custom-table, .custom-table th, .custom-table td</td>
                         <td>Class + descendant</td>
-                        <td>Light table with collapsed borders, dark-teal header row with white text, and padded cells.</td>
+                        <td>Light table with collapsed borders, deep iris header row with white text, and padded cells.</td>
                         <td>Past (jobs), Comments (this table)</td>
                     </tr>
                     <tr>
@@ -168,14 +168,14 @@
                     <tr>
                         <td>.highlight</td>
                         <td>Class</td>
-                        <td>Bold periwinkle for the lead-in word of a list item.</td>
+                        <td>Bold iris for the lead-in word of a list item: the light tint on the dark blocks, the deep shade on the white Future page.</td>
                         <td>Future, Comments</td>
                     </tr>
                     <tr>
                         <td>.site-guide, .site-guide li, .site-guide a, .site-guide a:hover</td>
                         <td>Class + descendant</td>
-                        <td>The page guide on the home page: bullets removed, a thin lilac rule between items, page names in Courier
-                            periwinkle that turn white on hover.</td>
+                        <td>The page guide on the home page: bullets removed, a thin iris rule between items, page names in Courier
+                            light iris that turn white on hover.</td>
                         <td>Home</td>
                     </tr>
                 </tbody>
@@ -195,26 +195,28 @@
                 </p>
 
                 <p class="bodyL">
-                    <span class="highlight">Colour: </span> I went through three palettes before settling on this one. I started with a
-                    jet black and teal scheme, then tried a mauve and periwinkle palette and a blue palette from Coolors. Each time I
-                    checked every text and background pairing against the WCAG contrast guideline of 4.5 to 1. The mauve set was too
-                    close in tone to use for text, and the blue set only just passed. The final palette is a hybrid: the jet black
-                    background and teal from the first scheme for structure, and periwinkle from the second for accent text on the dark
-                    blocks, where it reaches 6.3 to 1. The one thing I changed from my original teal was to stop using the same shade on
-                    both white and dark backgrounds, because no single mid-tone colour passes on both.
+                    <span class="highlight">Colour: </span> The palette is two near-blacks, white, platinum and one accent, iris. Night is
+                    the nav and footer, jet black is the content wrappers, and the slight difference between them separates the frame of
+                    the page from its content without adding another colour. Every text and background pairing was checked against the
+                    WCAG contrast guideline of 4.5 to 1. Platinum on jet black reaches 11.9 to 1 and white on night 18.5 to 1. The one
+                    problem was the accent: the mid iris that works for the 30px page title (3.6 to 1, which passes the 3 to 1 rule for
+                    large text) only reaches 3.9 to 1 as normal text on jet black and 3.6 to 1 on white, so it fails for body-size text
+                    on both. No single mid-tone passes on both a dark and a light background, so the accent is split into a light tint
+                    for text on the dark blocks (5.0 to 1) and a deep shade for text on white and for the table header backgrounds
+                    (6.3 to 1 under white text). The mid iris is kept for the title, the nav hover, image frames and borders.
                 </p>
 
                 <table class="palette">
                     <tr>
                         <th>Colour</th><th>Hex</th><th>Used for</th>
                     </tr>
-                    <tr><td>Jet black</td><td>#272D2D</td><td>Nav, wrappers, footer</td></tr>
-                    <tr><td>White</td><td>#FFFFFF</td><td>Page background, body text on dark</td></tr>
-                    <tr><td>Platinum</td><td>#ECECEC</td><td>Section headings on dark</td></tr>
-                    <tr><td>Teal</td><td>#508484</td><td>Page title on white, image frames</td></tr>
-                    <tr><td>Dark teal</td><td>#3E6A6A</td><td>Table header background</td></tr>
-                    <tr><td>Periwinkle</td><td>#A7ABDD</td><td>Accent text and links on dark</td></tr>
-                    <tr><td>Lilac ash</td><td>#9D8CA1</td><td>Dividers on the home page list</td></tr>
+                    <tr><td>Night</td><td>#0E141B</td><td>Nav, footer, dark text on white</td></tr>
+                    <tr><td>Jet black</td><td>#272D2D</td><td>Content wrappers</td></tr>
+                    <tr><td>White</td><td>#FFFFFF</td><td>Page background, nav and footer text</td></tr>
+                    <tr><td>Platinum</td><td>#ECECEC</td><td>Headings and body text on dark, table cells</td></tr>
+                    <tr><td>Iris</td><td>#8B7BD8</td><td>Page title, nav hover, image frames, borders</td></tr>
+                    <tr><td>Light iris</td><td>#9E91DE</td><td>Accent text and links on dark</td></tr>
+                    <tr><td>Deep iris</td><td>#5F4ACA</td><td>Accent text on white, table header background</td></tr>
                 </table>
 
                 <p class="bodyL">
@@ -265,8 +267,8 @@
                 </div>
 
                 <p class="bodyL">
-                    <span class="highlight">Other checks.</span> The site uses no JavaScript, so nothing depends on it. All colour pairings
-                    meet the WCAG AA contrast ratio. Links keep the browser's keyboard focus ring so the site can be navigated with the
+                    <span class="highlight">Other checks.</span> The site uses no JavaScript, so nothing depends on it. All text and background
+                    pairings meet the WCAG AA contrast ratio for their text size. Links keep the browser's keyboard focus ring so the site can be navigated with the
                     Tab key. All file names and paths are lower-case and relative, and every image is under 100 KB.
                 </p>
             </div>
@@ -279,7 +281,7 @@
                 <ul class="bodyL">
                     <li>W3Schools, HTML and CSS tutorials, used to learn and refresh HTML and CSS: https://www.w3schools.com/htmlcss/</li>
                     <li>CSS-Tricks, A Complete Guide to Flexbox, used for the flexbox layout: https://css-tricks.com/snippets/css/a-guide-to-flexbox/</li>
-                    <li>Coolors, used to source the colour palettes: https://coolors.co/add7f6-87bfff-3f8efc-2667ff</li>
+                    <li>Coolors, used to source the colour palettes: https://coolors.co/0e141b-272d2d-ffffff-ececec-8b7bd8</li>
                 </ul>
             </div>
         </div>

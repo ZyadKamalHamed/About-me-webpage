@@ -1,11 +1,11 @@
-/* Colours (hybrid of the teal and mauve palettes, every text pairing checked against WCAG AA 4.5:1)
-Jet black   = #272D2D   
-White       = #FFFFFF  
-Platinum    = #ECECEC  
-Teal        = #508484  
-Dark teal   = #3E6A6A  
-Periwinkle  = #A7ABDD  
-Lilac ash   = #9D8CA1  
+/* Colours (iris accent on a dark ground, every text pairing checked against WCAG AA 4.5:1)
+Night       = #0E141B   nav and footer
+Jet black   = #272D2D   wrappers, dark text on white
+White       = #FFFFFF   page background, nav and footer text
+Platinum    = #ECECEC   headings and body text on the dark wrappers, table cells
+Iris        = #8B7BD8   page title (30px, 3.6:1 on white passes the large-text 3:1 rule), nav hover, image frames, borders
+Light iris  = #9E91DE   accent text and links on Jet black (5.0:1); the mid Iris only reaches 3.9:1 there
+Deep iris   = #5F4ACA   accent text on white (6.3:1) and table header backgrounds under white text
 */
 
 /* BACKGROUND */
@@ -33,7 +33,7 @@ body {
     border-radius: 4px;
     padding-inline: 0;
     padding: 1rem;
-    background-color: #4A5A6C;
+    background-color: #0E141B;
 
 }
 #nav a{
@@ -42,7 +42,7 @@ body {
     font-weight: bold;
 }
 #nav a:hover {
-    color: #A7ABDD;
+    color: #8B7BD8;
     font-size: 1.1rem;
 }
 #nav a:active {
@@ -50,7 +50,7 @@ body {
     font-size: 1.2rem;
 }
 /* TEXT */
-/* Two typefaces only: Courier New for the title and headings, Georgia (set on body) for everything else */
+
 .title {
     color: #8B7BD8;
     font-family: 'Courier New', Courier, monospace;
@@ -62,28 +62,30 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 25px;
 }
-.heading-l { text-align: left; }
+.heading-l {
+    text-align: left;
+}
 .heading-c { text-align: center; }
 .heading-r { text-align: right; }
 .bodyL{
-    color: #FFFFFF;
+    color: #ECECEC;
     text-align: left;
 }
 .bodyC{
-    color: #FFFFFF;
+    color: #ECECEC;
     text-align: center;
 }
 .bodyR{
-    color: #FFFFFF;
+    color: #ECECEC;
     text-align: right;
 }
 .body_black{
-    color: #272D2D;
+    color: #0E141B;
     text-align: left;
 }
 /* CONTAINERS */
 .wrapper {
-    background-color: #1C2733;
+    background-color: #272D2D;
     display: flex;
     padding: 10px;
     justify-content: space-around;
@@ -122,7 +124,7 @@ body {
     align-items: stretch
 }
 .custom-table th{
-    background-color: #3E6A6A;
+    background-color: #5F4ACA;
     color: #fff;
     padding: 8px;
 }
@@ -144,17 +146,20 @@ body {
 .future-list li {
     padding: 0.2rem 0;
 }
-/* Coloured lead-in word on list items, and the page links on the home page */
 .highlight {
-    color: #A7ABDD;
+    color: #9E91DE;
     font-weight: bold;
+}
+
+.future-list .highlight {
+    color: #5F4ACA;
 }
 
 .images {
     width: 30%;
     height: 320px;      /* fill the wrapper's height instead of using aspect ratio */
     object-fit: cover;
-    background-color: #A7ABDD;
+    background-color: #8B7BD8;
     overflow-x: auto;
     border-radius: 5px;
     padding: 3px;
@@ -179,11 +184,11 @@ body {
     border: 1px solid #272D2D;
     width: 100%;
     padding: 1rem;
-    background-color: #272D2D;
+    background-color: #0E141B;
     height: 10px;
 }
 
-/* Home page guide to the other three pages */
+/* HOME PAGE: links to other pages*/
 .textblock-wide {
     width: 90%;
     padding: 15px;
@@ -198,10 +203,10 @@ body {
 }
 .site-guide li {
     padding: 12px 0;
-    border-top: 1px solid #9D8CA1;
+    border-top: 1px solid #8B7BD8;
 }
 .site-guide a {
-    color: #A7ABDD;
+    color: #9E91DE;
     font-weight: bold;
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
@@ -215,22 +220,22 @@ body {
 /* COMMENTS PAGE */
 code {
     font-family: 'Courier New', Courier, monospace;
-    color: #A7ABDD;
+    color: #9E91DE;
     font-weight: bold;
 }
-/* Small palette table inside a dark wrapper */
+
 .palette {
     color: #FFFFFF;
     border-collapse: collapse;
     margin: 10px 0 20px;
 }
 .palette th, .palette td {
-    border: 1px solid #9D8CA1;
+    border: 1px solid #8B7BD8;
     padding: 6px 12px;
     text-align: left;
 }
 .palette th {
-    background-color: #3E6A6A;
+    background-color: #5F4ACA;
 }
 /* Row of four small CSS-off screenshots on the comments page */
 .screenshots {
@@ -240,5 +245,5 @@ code {
 }
 .screenshot {
     width: 24%;
-    border: 1px solid #9D8CA1;
+    border: 1px solid #8B7BD8;
 }
