@@ -1,34 +1,291 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
         <title> Comments </title>
         <link rel="stylesheet" type="text/css" href="websystems.css">
     </head>
-    
-    <body>    
-        <nav id = "nav">
+
+    <body>
+        <nav id="nav">
             <a href="index.html">Home</a> | 
             <a href="past.html">Past</a> | 
             <a href="future.html">Future</a> | 
             <a href="comments.html">Comments</a> 
         </nav>
 
-        <p>
-            https://www.apsacademy.gov.au/learning-experiences/resources/wcag-checklist
-            https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-            https://www.w3schools.com/html/default.asp
-            
-            
-            Overall Structure of the website (how the menu system connects the pages, links to
-            websystems.css)- How individual pages are structured.
-            • The styles used in particular the types of selectors, where they are used and what
-            they do.
-            • The aesthetics of the website i.e. colours, fonts, layout etc.
-            • Accessibility issues – use of alt tags, is the site usable when CSS is turned off
-        </p>
-    </body>
+        <h1 class="title">Comments</h1>
+        <div class="wrapper">
+            <div class="textblock-wide">
+                <h2 class="heading-c">1. Overall structure</h2>
 
-    <footer id = "footer">
-        <p>© 2026 Zyad Kamal Hamed 25561729.</p>
-    </footer>
+                <p class="bodyC">
+                    The site is four HTML pages and one stylesheet. It is deliberately flat: there is no hierarchy of sub-pages,
+                    so every page is one click away from every other page. Navigation is handled by the same sticky menu bar at the
+                    top of all four pages, so the visitor never needs the browser's back button. The home page also contains a
+                    second set of links (the "What's on this site" list) that describes each page before you click through to it.
+                    All four pages link to the one file, <code>websystems.css</code>, so a change to a colour or font is made once and
+                    applies everywhere. Images live in an <code>imgs</code> sub-directory, and every path in the site is relative
+                    so it works wherever the folder is hosted.
+                </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="textblock-wide">
+                <h2 class="heading-c">2. Internal structure of each page</h2>
+
+                <p class="bodyL">
+                    Every page follows the same template, top to bottom:
+                </p>
+                <ol class="bodyL">
+                    <li><code>Nav Bar: </code>Top nav, identical on each page.</li>
+                    <li><code>H1 Title: </code>The page name, centred on the white page background.</li>
+                    <li><code>Div Wrapper: </code>A dark flexbox row. Each one holds:
+                        <ul>
+                            <li><code>Image: </code>A photo on the left or right of the row (not on every wrapper).</li>
+                            <li><code>Div TextBlock: </code>The text column next to an image, 70% wide.</li>
+                            <li><code>Div TextBlock-Wide: </code>Used instead of TextBlock when there is no image, 90% wide.</li>
+                            <li><code>H2 Heading: </code>Inside the text block, so each wrapper is its own readable section.</li>
+                        </ul>
+                    </li>
+                    <li><code>Footer</code>: subject code, my name and student number.</li>
+                </ol>
+
+                <p class="bodyL">
+                    On top of that template each page adds what it needs:
+                </p>
+                <ul class="bodyL">
+                    <li><span class="highlight">Home</span>: two wrappers. An introduction with my photo, then an unordered list that acts
+                        as a guide to the other three pages.</li>
+                    <li><span class="highlight">Past</span>: three wrappers that alternate image-left and image-right so the page has a
+                        rhythm as you scroll, followed by a table of every job I have had with a rating, a pro and a con for each.</li>
+                    <li><span class="highlight">Future</span>: an ordered list of the criteria I use to judge a role, with the key word of
+                        each item in a <code>span</code>, then a full-width image with no border.</li>
+                    <li><span class="highlight">Comments</span>: this page. Five wrappers, one per point the assignment asks for, plus a
+                        table of the styles used.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="textblock-wide">
+                <h2 class="heading-c">3. Styles used</h2>
+                <p class="bodyC">
+                    The table below lists the main selectors in <code>websystems.css</code>. I have grouped similar ones rather than
+                    listing every rule. All styling is in the one external file; there are no inline styles and no style
+                    blocks in any page.
+                </p>
+            </div>
+        </div>
+
+        <div class="body_container">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Type</th>
+                        <th>What it does</th>
+                        <th>Where it is used</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>body</td>
+                        <td>Element</td>
+                        <td>Sets the base font (Georgia) for the whole site, removes the browser's default margin, and makes the body a
+                            flex column at least as tall as the window so the footer sits at the bottom of short pages.</td>
+                        <td>Every page</td>
+                    </tr>
+                    <tr>
+                        <td>#nav</td>
+                        <td>ID</td>
+                        <td>Dark menu bar, flexbox with links spread evenly, sticky so it stays visible while scrolling.</td>
+                        <td>Every page</td>
+                    </tr>
+                    <tr>
+                        <td>#nav a, #nav a:hover, #nav a:active</td>
+                        <td>Descendant</td>
+                        <td>White bold links with no underline; turn periwinkle on hover and while being clicked.</td>
+                        <td>Every page</td>
+                    </tr>
+                    <tr>
+                        <td>#footer</td>
+                        <td>ID</td>
+                        <td>Dark bar pinned to the bottom of the page using <code>margin-top: auto</code> inside the flex body.</td>
+                        <td>Every page</td>
+                    </tr>
+                    <tr>
+                        <td>.title</td>
+                        <td>Class</td>
+                        <td>Page heading: Courier New, 30px, teal, centred.</td>
+                        <td>The h1 on every page</td>
+                    </tr>
+                    <tr>
+                        <td>.heading-l, .heading-c, .heading-r</td>
+                        <td>Class (grouped)</td>
+                        <td>Section headings: Courier New, 25px, platinum. One shared rule for the look, then three one-line rules
+                            that only set left, centre or right alignment.</td>
+                        <td>Every h2</td>
+                    </tr>
+                    <tr>
+                        <td>.bodyL, .bodyC, .bodyR, .body_black</td>
+                        <td>Class</td>
+                        <td>Paragraph and list text. White on the dark wrappers with left, centre or right alignment; the black variant
+                            is for text on the white page background.</td>
+                        <td>All body copy</td>
+                    </tr>
+                    <tr>
+                        <td>.wrapper</td>
+                        <td>Class</td>
+                        <td>The dark content block. A flex row that spaces its children evenly and centres them vertically.</td>
+                        <td>Every content section</td>
+                    </tr>
+                    <tr>
+                        <td>.textblock, .textblock-wide</td>
+                        <td>Class</td>
+                        <td>The text column inside a wrapper: 70% wide when it shares the row with an image, 90% when it is on its own.</td>
+                        <td>Inside every wrapper</td>
+                    </tr>
+                    <tr>
+                        <td>.images, .images_no_border</td>
+                        <td>Class</td>
+                        <td>Photo sizing. .images is 30% wide with a fixed height and object-fit: cover so
+                            portrait and landscape photos crop to the same shape, with a purple frame. The no-border version is for the
+                            full-width image on the Future page.</td>
+                        <td>Home, Past, Future</td>
+                    </tr>
+                    <tr>
+                        <td>.custom-table, .custom-table th, .custom-table td</td>
+                        <td>Class + descendant</td>
+                        <td>Light table with collapsed borders, dark-teal header row with white text, and padded cells.</td>
+                        <td>Past (jobs), Comments (this table)</td>
+                    </tr>
+                    <tr>
+                        <td>.future-list, .future-list li</td>
+                        <td>Class + descendant</td>
+                        <td>Centres the ordered list as a block while keeping the items left-aligned so the numbers line up.</td>
+                        <td>Future</td>
+                    </tr>
+                    <tr>
+                        <td>.highlight</td>
+                        <td>Class</td>
+                        <td>Bold periwinkle for the lead-in word of a list item.</td>
+                        <td>Future, Comments</td>
+                    </tr>
+                    <tr>
+                        <td>.site-guide, .site-guide li, .site-guide a, .site-guide a:hover</td>
+                        <td>Class + descendant</td>
+                        <td>The page guide on the home page: bullets removed, a thin lilac rule between items, page names in Courier
+                            periwinkle that turn white on hover.</td>
+                        <td>Home</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="wrapper">
+            <div class="textblock-wide">
+                <h2 class="heading-c">4. Graphic design</h2>
+
+                <p class="bodyL">
+                    <span class="highlight">Layout:</span> The site is built on flexbox, which I learned from <span class="highlight">css-tricks.com</span> (see References). Each section is a dark block on a white page, which keeps the reading width sensible on a 1024 by 768 screen and
+                    makes each section feel like its own card. On the Past page the image alternates sides from one wrapper to the next
+                    so the eye zig-zags down the page instead of reading three identical rows. The nav is sticky, so it is always
+                    available on the long Past page, and the footer is pushed to the bottom of the window on short pages so the layout
+                    does not look unfinished.
+                </p>
+
+                <p class="bodyL">
+                    <span class="highlight">Colour: </span> I went through three palettes before settling on this one. I started with a
+                    jet black and teal scheme, then tried a mauve and periwinkle palette and a blue palette from Coolors. Each time I
+                    checked every text and background pairing against the WCAG contrast guideline of 4.5 to 1. The mauve set was too
+                    close in tone to use for text, and the blue set only just passed. The final palette is a hybrid: the jet black
+                    background and teal from the first scheme for structure, and periwinkle from the second for accent text on the dark
+                    blocks, where it reaches 6.3 to 1. The one thing I changed from my original teal was to stop using the same shade on
+                    both white and dark backgrounds, because no single mid-tone colour passes on both.
+                </p>
+
+                <table class="palette">
+                    <tr>
+                        <th>Colour</th><th>Hex</th><th>Used for</th>
+                    </tr>
+                    <tr><td>Jet black</td><td>#272D2D</td><td>Nav, wrappers, footer</td></tr>
+                    <tr><td>White</td><td>#FFFFFF</td><td>Page background, body text on dark</td></tr>
+                    <tr><td>Platinum</td><td>#ECECEC</td><td>Section headings on dark</td></tr>
+                    <tr><td>Teal</td><td>#508484</td><td>Page title on white, image frames</td></tr>
+                    <tr><td>Dark teal</td><td>#3E6A6A</td><td>Table header background</td></tr>
+                    <tr><td>Periwinkle</td><td>#A7ABDD</td><td>Accent text and links on dark</td></tr>
+                    <tr><td>Lilac ash</td><td>#9D8CA1</td><td>Dividers on the home page list</td></tr>
+                </table>
+
+                <p class="bodyL">
+                    <span class="highlight">Typefaces: </span> Two only. Courier New for the title and section headings, because the
+                    monospace look suits a site by an AI student and gives it some character. Georgia for everything else: it was designed
+                    for screens and has a larger x-height than Times, so white text on a dark background stays readable at 16px. Setting
+                    Georgia once on body means the nav, tables and footer inherit it. An earlier version accidentally used five
+                    fonts, because the table and footer had no font set and fell back to the browser default, which is exactly the kind of
+                    inconsistency a stylesheet is meant to prevent.
+                </p>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="textblock-wide">
+                <h2 class="heading-c">5. Accessibility: alt text and the site without CSS</h2>
+
+                <p class="bodyL">
+                    <span class="highlight">Alt text: </span> Every image has an <code>alt</code> attribute that describes what is in the
+                    picture rather than the fact that it is a picture, since a screen reader already announces it as an image. The photos
+                    of me are described by what I am doing in them (as a kid, performing on stage, at a conference), and the laptop
+                    photo on the Future page describes the scene because that scene is the point of the image. If an image fails to load,
+                    the alt text appears in its place so the section still makes sense.
+                </p>
+
+                <p class="bodyL">
+                    <span class="highlight">Without CSS or images: </span> I tested this in Chrome by temporarily renaming
+                    <code>websystems.css</code> so the browser could not find it, and turning images off in Chrome's site settings, then
+                    reloading each page. The screenshots below show all four pages in that state. The site is still completely usable.
+                    The nav bar becomes a plain row of underlined links at the top of every page, separated by the pipe characters that
+                    are in the HTML, so you can still reach every page without the back button. The page title and section headings keep
+                    their order and their default sizes, so each page still has a clear structure, and the paragraphs read top to bottom
+                    in the same order as the styled version. The jobs table on the Past page is still a table with a header row, and the
+                    lists on the Home and Future pages are still numbered or bulleted. Where each photo would be, the browser shows its
+                    <code>alt</code> text instead ("Headshot image of Zyad", "Image of me as a kid", and so on), which is enough to know
+                    what you are missing without breaking the flow of the text. The only real loss is cosmetic: the dark blocks, the
+                    alternating left and right layout on the Past page, and the two typefaces are gone, because all of that lives in the
+                    stylesheet. It works this way because the pages use semantic elements (<code>nav</code>, <code>h1</code>,
+                    <code>h2</code>, <code>table</code>, <code>ul</code>, <code>ol</code>, <code>footer</code>) rather than generic
+                    <code>div</code> tags for everything, so the structure lives in the HTML and the CSS only decorates it.
+                </p>
+
+                <div class="screenshots">
+                    <img class="screenshot" src="imgs/index-no-css.jpg" alt="Screenshot of the Home page with CSS and images disabled">
+                    <img class="screenshot" src="imgs/past-no-css.jpg" alt="Screenshot of the Past page with CSS and images disabled">
+                    <img class="screenshot" src="imgs/future-no-css.jpg" alt="Screenshot of the Future page with CSS and images disabled">
+                    <img class="screenshot" src="imgs/comments-no-css.jpg" alt="Screenshot of the Comments page with CSS and images disabled">
+                </div>
+
+                <p class="bodyL">
+                    <span class="highlight">Other checks.</span> The site uses no JavaScript, so nothing depends on it. All colour pairings
+                    meet the WCAG AA contrast ratio. Links keep the browser's keyboard focus ring so the site can be navigated with the
+                    Tab key. All file names and paths are lower-case and relative, and every image is under 100 KB.
+                </p>
+            </div>
+        </div>
+
+        <!-- REFERENCES -->
+        <div class="wrapper">
+            <div class="textblock-wide">
+                <h2 class="heading-c">References</h2>
+                <ul class="bodyL">
+                    <li>W3Schools, HTML and CSS tutorials, used to learn and refresh HTML and CSS: https://www.w3schools.com/htmlcss/</li>
+                    <li>CSS-Tricks, A Complete Guide to Flexbox, used for the flexbox layout: https://css-tricks.com/snippets/css/a-guide-to-flexbox/</li>
+                    <li>Coolors, used to source the colour palettes: https://coolors.co/add7f6-87bfff-3f8efc-2667ff</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <p>31268 Web Systems SPR 2026 - Zyad Kamal Hamed - 25561729.</p>
+        </footer>
+    </body>
 </html>
